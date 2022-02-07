@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab 2</string>
+    <string name="GUI">Look at my GUI:</string>
+    <string name="button">Click here:</string>
+    <string name="check">Check this out!</string>
+    <string name="switches">Switch on/off</string>
+    <string name="toast_message">Here is more information %1$d %%</string>
+</resources>
