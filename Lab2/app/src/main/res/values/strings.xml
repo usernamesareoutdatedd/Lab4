@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Lab 2</string>
-    <string name ="email">Enter your email address:</string>
-    <string name ="password">Type your password:</string>
-    <string name ="info"></string>
+    <string name="email">Enter your email address:</string>
+    <string name="password">Type your password:</string>
+    <string name="info"></string>
+    <string name="button">Login</string>
+    <string name="button2">Next page</string>
 
 </resources>
