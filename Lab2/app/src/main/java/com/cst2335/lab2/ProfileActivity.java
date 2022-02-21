@@ -33,24 +33,34 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e(TAG, "in function:" /*onStart()*/);
+        Log.e(TAG, "in function:" /*onCreate()*/);
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "in function:" /*onPause()*/);
         setContentView(R.layout.activity_new);
 
 
         ImageButton button = findViewById(R.id.imageButton);
+        ImageView imgView = findViewById(R.id.imageView);
 
         t1 = findViewById(R.id.t3);
 
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("userPref", Context.MODE_PRIVATE);
+        Log.e(TAG, "in function:" /*onStop()*/);
+        Log.e(TAG, "in function:" /*onDestroy()*/);
         String email = sharedPreferences.getString("plain", "");
-
+        Log.e(TAG, "in function:" /*onActivityResults()*/);
         t1.setText(email);
 
 
 
 
-    });
+
+
+    }
+
+        }
 
 
 
@@ -60,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-}
+
 
 
 

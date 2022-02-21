@@ -50,6 +50,12 @@
             android:layout_height="wrap_content"
             android:text="Your picture:" />
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@android:drawable/picture_frame" />
+
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="match_parent"
