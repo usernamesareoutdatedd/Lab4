@@ -24,19 +24,25 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ImageButton;
+
+
 
 public class ProfileActivity extends AppCompatActivity {
+    static final int REQUEST_IMAGE_CAPTURE = 1;
+    public static final String TAG = "PROFILE_ACTIVITY";
 
     EditText t1;
 
-    public static final String TAG = "PROFILE_ACTIVITY";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.e(TAG, "in function:" /*onStart()*/);
-        Log.e(TAG, "in function:" /*onCreate()*/);
+
         super.onCreate(savedInstanceState);
-        Log.e(TAG, "in function:" /*onPause()*/);
+
         setContentView(R.layout.activity_new);
 
 
@@ -47,10 +53,9 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("userPref", Context.MODE_PRIVATE);
-        Log.e(TAG, "in function:" /*onStop()*/);
-        Log.e(TAG, "in function:" /*onDestroy()*/);
+
         String email = sharedPreferences.getString("plain", "");
-        Log.e(TAG, "in function:" /*onActivityResults()*/);
+
         t1.setText(email);
 
 
@@ -58,9 +63,51 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
+}
+
+
+protected void onCreate() {
+        onCreate();
+        Log.e(TAG, "in function onCreate()");
+}
+
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+        Log.e(TAG, "In function onStart():");
     }
 
-        }
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        Log.e(TAG, "In function onResume():");
+    }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Log.e(TAG, "In function onPause():");
+    }
+    @Override
+    protected void onStop()
+    {
+        super.onStop();
+        Log.e(TAG, "In function onStop():");
+    }
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        Log.e(TAG, "In function onDestroy():");
+    }
+
+
+    }
+
+
 
 
 
