@@ -5,5 +5,6 @@
     <string name="info"></string>
     <string name="button">Login</string>
     <string name="button2">Next page</string>
+    <string name="newpagebutton">Go to chat</string>
 
 </resources>

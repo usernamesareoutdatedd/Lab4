@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -49,6 +50,8 @@ public class ProfileActivity extends AppCompatActivity {
 
         ImageButton button = findViewById(R.id.imageButton);
         ImageView imgView = findViewById(R.id.imageView);
+
+        Button button2 = findViewById(R.id.newpagebutton);
 
         t1 = findViewById(R.id.t3);
 
