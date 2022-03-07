@@ -64,7 +64,9 @@ public class ProfileActivity extends AppCompatActivity {
 
 
 
-
+        button2.setOnClickListener(new View.OnClickListener() {
+            Intent intent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+        });
 
 
 }
@@ -107,6 +109,8 @@ protected void onCreate() {
         super.onDestroy();
         Log.e(TAG, "In function onDestroy():");
     }
+
+
 
 
     }
