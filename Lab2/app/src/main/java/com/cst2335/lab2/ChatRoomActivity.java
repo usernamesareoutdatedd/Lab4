@@ -23,7 +23,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     Button sendBtn;
     Button recieveBtn;
     EditText editTxt;
-    ArrayList <String> storeChat = new ArrayList <String>();
+    ArrayList<String> chat = new ArrayList<String>();
     ChatAdapter messageAdapter;
     TextView message;
 
@@ -40,7 +40,8 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         messageAdapter = new ChatAdapter(this);
         list.setAdapter(messageAdapter);
-        onClick();
+        onClick(); //Send button
+        onClick2(); //Recieve button
 
     }
 
@@ -49,45 +50,62 @@ public class ChatRoomActivity extends AppCompatActivity {
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("EditText", editTxt.getText().toString());
+
                 String chatString = editTxt.getText().toString();
-                storeChat.add(chatString);
+                chat.add(chatString);
                 messageAdapter.notifyDataSetChanged();
                 editTxt.setText("");
 
             }
         });
+
     }
 
-    private class ChatAdapter extends ArrayAdapter<String>
-    {
+    public void onClick2() {
+        recieveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String chatString = editTxt.getText().toString();
+                chat.add(chatString);
+                messageAdapter.notifyDataSetChanged();
+                editTxt.setText("");
+
+            }
+        });
+
+    }
+
+    private class ChatAdapter extends ArrayAdapter<String> {
 
         public ChatAdapter(Context ctx) {
             super(ctx, 0);
         }
 
-        public int getCount(){
-            return storeChat.size();
+        public int getCount() {
+            return chat.size();
         }
 
-        public String getItem(int position){
-            return storeChat.get(position);
+        public String getItem(int position) {
+            return chat.get(position);
         }
 
-        public View getView(int position, View convertView, ViewGroup parent){
+        public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater inflater = ChatRoomActivity.this.getLayoutInflater();
-            View result = null ;
-            if(position%2 == 0)
+            View result = null;
+            if (position % 2 == 0)
                 result = inflater.inflate(R.layout.chat_incoming, null);
+
             else
                 result = inflater.inflate(R.layout.chat_outgoing, null);
-            message = (TextView)result.findViewById(R.id.messageText);
-            message.setText(   getItem(position)  ); // get the string at position
-            //position++;
+            message = (TextView) result.findViewById(R.id.messageText);
+            message.setText(getItem(position));
+
             return result;
 
         }
 
 
+    }
 
 }
