@@ -29,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
+import com.cst2335.lab2.ChatRoomActivity;
 import com.cst2335.lab2.R;
 
 
@@ -65,7 +66,11 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         button2.setOnClickListener(new View.OnClickListener() {
-            Intent intent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
+                startActivity(intent);
+            }
         });
 
 

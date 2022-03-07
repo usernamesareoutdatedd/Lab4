@@ -15,10 +15,10 @@
         android:theme="@style/Theme.Lab2">
         <activity
             android:name=".ChatRoomActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.cst2335.lab4.PhotoActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name="com.cst2335.lab4.MainActivity"
             android:exported="true">

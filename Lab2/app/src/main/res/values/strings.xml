@@ -6,5 +6,8 @@
     <string name="button">Login</string>
     <string name="button2">Next page</string>
     <string name="newpagebutton">Go to chat</string>
+    <string name="buttonRecieve">Recieve</string>
+    <string name="buttonSend">Send</string>
+    <string name="editTextChat">Type here</string>
 
 </resources>
