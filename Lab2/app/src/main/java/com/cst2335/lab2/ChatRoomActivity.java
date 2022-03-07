@@ -75,12 +75,12 @@ public class ChatRoomActivity extends AppCompatActivity {
         }
 
         public View getView(int position, View convertView, ViewGroup parent){
-            LayoutInflater inflater = ChatWindow.this.getLayoutInflater();
+            LayoutInflater inflater = ChatRoomActivity.this.getLayoutInflater();
             View result = null ;
             if(position%2 == 0)
-                result = inflater.inflate(R.layout.chat_row_incoming, null);
+                result = inflater.inflate(R.layout.chat_incoming, null);
             else
-                result = inflater.inflate(R.layout.chat_row_outgoing, null);
+                result = inflater.inflate(R.layout.chat_outgoing, null);
             message = (TextView)result.findViewById(R.id.messageText);
             message.setText(   getItem(position)  ); // get the string at position
             //position++;
