@@ -1,4 +1,4 @@
-package com.cst2335.lab2;
+package com.cst2335.lab4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.cst2335.lab2.R;
 
 public class MainActivity extends AppCompatActivity {
      TextView email;

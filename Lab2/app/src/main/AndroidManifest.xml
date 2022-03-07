@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab2">
         <activity
-            android:name=".PhotoActivity"
+            android:name="com.cst2335.lab4.PhotoActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.cst2335.lab4.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfileActivity" />
+        <activity android:name="com.cst2335.lab4.ProfileActivity" />
     </application>
 
 </manifest>

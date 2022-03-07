@@ -1,4 +1,4 @@
-package com.cst2335.lab2;
+package com.cst2335.lab4;
 
 import org.junit.Test;
 

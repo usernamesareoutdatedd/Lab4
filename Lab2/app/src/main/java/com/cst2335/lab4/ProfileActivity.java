@@ -1,4 +1,4 @@
-package com.cst2335.lab2;
+package com.cst2335.lab4;
 
 import android.Manifest;
 import android.app.Activity;
@@ -28,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ImageButton;
 
+import com.cst2335.lab2.R;
 
 
 public class ProfileActivity extends AppCompatActivity {
